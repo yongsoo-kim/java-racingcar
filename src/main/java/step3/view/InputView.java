@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class InputView {
 
 
-    private static InputView inputView = new InputView();
+    private static final InputView inputView = new InputView();
 
-    private Scanner scanner = new Scanner(System.in);
-    private List<String> userInputs = new ArrayList<>();
+    private final Scanner scanner = new Scanner(System.in);
+    private final List<String> userInputs = new ArrayList<>();
 
     private InputView() {
     }

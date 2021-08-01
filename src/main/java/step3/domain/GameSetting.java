@@ -12,9 +12,9 @@ public class GameSetting {
 
     private static final String COMMA_DELIMITER = ",";
 
-    private List<CarName> carNames;
-    private RoundCount roundCount;
-    private RunStrategy runStrategy;
+    private final List<CarName> carNames;
+    private final RoundCount roundCount;
+    private final RunStrategy runStrategy;
 
     public GameSetting(List<String> userInputs, RunStrategy runStrategy) {
         List<CarName> inputCarNames = generateCarNameList(userInputs);
@@ -30,7 +30,7 @@ public class GameSetting {
         List<String> inputCarNames = splitAndTrimString(carNamesString);
 
         List<CarName> carNameList = inputCarNames.stream()
-            .map(n -> new CarName(n))
+            .map(CarName::new)
             .collect(Collectors.toList());
 
         return carNameList;
@@ -76,6 +76,6 @@ public class GameSetting {
     }
 
     public int getRoundCountInt() {
-        return roundCount.value();
+        return getRoundCount().value();
     }
 }

@@ -10,7 +10,7 @@ public class ResultView {
     public static final String PROGRESS_SYMBOL = "-";
     private static final String COLON_DELIMITER = " : ";
 
-    private static ResultView instance = new ResultView();
+    private static final ResultView instance = new ResultView();
 
 
     private ResultView() {

@@ -6,7 +6,7 @@ import java.util.List;
 public class CarRacingGame {
 
     private final GameSetting gameSetting;
-    private CarRacingGameResult gameResult;
+    private final CarRacingGameResult gameResult;
 
     public CarRacingGame(GameSetting gameSetting) {
         List<Round> playedRounds = new ArrayList<>();

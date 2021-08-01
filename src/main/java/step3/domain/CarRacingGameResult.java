@@ -10,7 +10,7 @@ public class CarRacingGameResult {
 
     private static final String NAME_DELIMITER = ",";
 
-    private List<Round> playedRounds;
+    private final List<Round> playedRounds;
 
     public CarRacingGameResult(List<Round> playedRounds) {
         this.playedRounds = playedRounds;

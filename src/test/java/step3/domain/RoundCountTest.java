@@ -14,9 +14,7 @@ class RoundCountTest {
     @ValueSource(ints = {1, 50, 100})
     @DisplayName("시도회수가 1이상이면 예외를 던지지 않는다.")
     void roundCount_ok_values(int count) {
-        assertThatCode(() -> {
-            new RoundCount(count);
-        }).doesNotThrowAnyException();
+        assertThatCode(() -> new RoundCount(count)).doesNotThrowAnyException();
     }
 
 
@@ -25,9 +23,8 @@ class RoundCountTest {
     @DisplayName("시도회수가 1이상이면 예외를 던지지 않는다.")
     void roundCount_ng_values(int count) {
 
-        assertThatThrownBy(() -> {
-            new RoundCount(count);
-        }).isInstanceOf(WrongGameSettingException.class);
+        assertThatThrownBy(() -> new RoundCount(count))
+            .isInstanceOf(WrongGameSettingException.class);
 
     }
 }

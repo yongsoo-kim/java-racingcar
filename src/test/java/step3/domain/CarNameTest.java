@@ -14,9 +14,7 @@ class CarNameTest {
     @ValueSource(strings = {"c", "car2", "car_3"})
     @DisplayName("자동차 이름은 5글자 이하라면 아무런 예외없이 생성될수있다.")
     void carName_ok(String carNameString) {
-        assertThatCode(() -> {
-            new CarName(carNameString);
-        }).doesNotThrowAnyException();
+        assertThatCode(() -> new CarName(carNameString)).doesNotThrowAnyException();
 
     }
 
@@ -25,8 +23,7 @@ class CarNameTest {
     @DisplayName("자동차 이름이 5글자를 초과하면, 예외를 던진다..")
     void carName_ng(String carNameString) {
 
-        assertThatThrownBy(() -> {
-            new CarName(carNameString);
-        }).isInstanceOf(WrongGameSettingException.class);
+        assertThatThrownBy(() -> new CarName(carNameString))
+            .isInstanceOf(WrongGameSettingException.class);
     }
 }

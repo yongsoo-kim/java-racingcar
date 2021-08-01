@@ -7,7 +7,7 @@ import step3.runType.RunStrategy;
 public class Round {
 
 
-    private List<CarRunResult> carRunResults;
+    private final List<CarRunResult> carRunResults;
 
     public Round() {
         this(new ArrayList<>());

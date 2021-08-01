@@ -2,8 +2,8 @@ package step3.domain;
 
 public class CarRunResult {
 
-    private CarName carName;
-    private int runDistance;
+    private final CarName carName;
+    private final int runDistance;
 
     public CarRunResult(CarName carName, int runDistance) {
         this.carName = carName;
